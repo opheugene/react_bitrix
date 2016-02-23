@@ -1,7 +1,7 @@
 import React from 'react';
 import { marked } from 'react-marked';
 
-class About extends React.Component {
+class ContentPage extends React.Component {
 
     static propTypes = {
         name: React.PropTypes.string,
@@ -15,10 +15,11 @@ class About extends React.Component {
 
     componentWillMount() {
 
-        console.log(location);
+        var url = "/pages" + location.pathname + location.search;
+        console.log(url);
 
         // ajax get
-        $.get('/about/index.php', function (data) {
+        $.get(url, function (data) {
             this.setState({html: data});
         }.bind(this));
 
@@ -33,4 +34,4 @@ class About extends React.Component {
     }
 }
 
-module.exports = About
+module.exports = ContentPage

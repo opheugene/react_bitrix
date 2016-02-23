@@ -17,8 +17,10 @@ class CatalogList extends React.Component {
 
     componentWillMount() {
 
+        var url = "/pages" + location.pathname + location.search;
+
         // ajax get
-        $.get('/catalog/index.php', function (data) {
+        $.get(url, function (data) {
             this.setState({html: data});
         }.bind(this));
 

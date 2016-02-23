@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "css-loader": "^0.23.1",
     "jquery": "^2.2.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",

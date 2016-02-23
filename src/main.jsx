@@ -19,13 +19,9 @@ const routes = {
             component: require('./components/catalog/CatalogList.jsx')
         },
         {
-            path: '/about/',
-            component: require('./components/content-pages/About.jsx')
-        },
-        {
             path: '*',
-            component: require('./components/layout/404.jsx')
-        }
+            component: require('./components/layout/ContentPage.jsx')
+        },
     ]
 
 }

@@ -15,8 +15,10 @@ class Home extends React.Component {
 
     componentWillMount() {
 
+        var url = "/pages" + location.pathname + location.search;
+
         // ajax get
-        $.get('/_index.php', function (data) {
+        $.get(url, function (data) {
             this.setState({html: data});
         }.bind(this));
 
